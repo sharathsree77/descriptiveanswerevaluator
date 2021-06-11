@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+  <head>
+    <title>Result Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">-->
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+
+<!-- site css -->
+    <link rel="stylesheet" href="static/dist/css/site.min.css">
+    
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700,400italic,600italic,700italic,800italic,300italic" rel="stylesheet" type="text/css">
+
+</link>
+</link>
+  </head>
+<style>
+body
+{
+    
+}
+</style>
+  <!--font face="garamond" size=6 color="red">
+    <h1>
+    <center>Results</center>
+    </h1>
+    </font-->
+	 <div class="alert alert-info">
+                       
+ <!--button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button-->
+                        
+<h1><center>RESULTS</center></h1>
+                     
+   <!--<p>Change this and that and try again. , est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+-->             
+           <p>                                          </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+  <body>
+    <div class="container" style="overflow-x:auto">
+ 
+ 
+      <br>
+                                              <script type='text/javascript'>
+//var num = prompt("Enter Number", "0") //prompt user to enter the number
+//var u='{{u1}}'
+//var tq='{{t_q}}'
+var n1='{{n}}'
+var num = parseInt(n1); //parse the num to number
+var i = 0;
+//var i=parseInt(i)
+document.write('<font size=3>');
+document.write('<table border="3" cellspacing="2">');
+document.write('<tr><th>USN'+'</th>'+'<th>Subject</th>'+'<th>Question</th>'+'<th>Tutor Answer</th>'+'<th>Student Answer</th>'+'<th>Individual Percentage Score</th>'+'<th>Cosine</th>'+'<th>Levenshtein</th>'+'<th>Jaccard</th>'+'<th>Dice</th>'+'<th>Semantic</th></tr>')
+var a={{u1|tojson}}
+var b={{su1|tojson}}
+var c={{q1|tojson}}
+var d={{t1|tojson}}
+var e={{st1|tojson}}
+var f={{m1|tojson}}
+var g={{c1|tojson}}
+var h={{l1|tojson}}
+var i1={{j1|tojson}}
+var j={{d1|tojson}}
+var k={{s1|tojson}}
+var l={{tot1|tojson}}
+for(i=0;i<num;i++) {
+    //var a=['{{ ', '.join(t_q)}}']
+    document.write("<tr><td>"+a[i]+"</td><td>"+b[i]+"</td><td>"+c[i]+"</td><td>"+d[i]+"</td><td>"+e[i]+"</td><td>"+f[i]+"</td><td>"+g[i]+"</td><td>"+h[i]+"</td><td>"+i1[i]+"</td><td>"+j[i]+"</td><td>"+k[i]+"</td></tr>");
+    //j++
+}
+
+document.write("</table>");
+</script>
+ <br>
+<br>
+<div class="text-center">
+            
+					<a href="/" style="font-size: 20px">
+						Click to Exit
+					</a>
+				</div>   
+    </div>
+</html>

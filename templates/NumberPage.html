@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Number Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <style>
+body
+{
+    background-image:url("static/images8.jpg")
+}
+</style>
+  <font face="garamond" size=6 color="midnightblue">
+    <h1>
+    <center>Enter the number of questions</center>
+    </h1>
+    </font>
+   <!-- <body bgcolor="powderblue">-->
+  <body>
+    <div class="container">
+      
+      <br>
+      <form action="" method="post">
+        <input type="text" name="num" value="{{
+          request.form.num }}">
+        <input class="btn btn-default" type="submit" value="Submit">
+      </form>
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+    </div>
+  </body>
+</html>

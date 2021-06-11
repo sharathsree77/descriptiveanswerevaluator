@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+  <head>
+    <title>Select Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">-->
+   <link rel="stylesheet" href="static/dist/css/site.min.css">
+    
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700,400italic,600italic,700italic,800italic,300italic" rel="stylesheet" type="text/css">
+  </head>
+  <style>
+body
+{
+   
+}
+</style>
+  <!--font face="garamond" size=5 color="purple">
+    <h1>
+    <center>SELECT A TEST</center>
+    </h1>
+    </font>
+    
+  <body>
+    <div class="container">
+  
+      <br-->
+	  <div class="alert alert-info">
+                       
+ <!--button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button-->
+                        
+<h1><center>SELECT A TEST</center></h1>
+
+                     
+   <!--<p>Change this and that and try again. , est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+-->             
+           <p>                                          </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+	  
+	  <body>
+    <div class="container" style="overflow-x:auto">
+       <script type='text/javascript'>
+var id1='{{id_d}}'
+var sub1='{{sub_b}}'
+//document.write(id1);
+//document.write(sub1)
+var j=0
+//j=parseInt(j)
+var i = 0;
+//var i=parseInt(i)
+j=0
+j=parseInt(j)
+document.write("<center>");
+document.write('<font size=5>');
+//
+document.write('<table border="3" cellspacing="2" width="50%">');
+
+document.write('<tr><th>Subject Code'+'</th>'+'<th>Subject Name</th>')
+var a={{id_d|tojson}}
+var b={{sub_b|tojson}}
+//document.write(a.length)
+//document.write(b.length)  value="{{request.form.code }}"
+
+for(i=0;i<a.length;i++) {
+    document.write("<tr><td>"+a[i]+"</td><td>"+b[i]+"</td></tr>");
+    //j++
+}
+
+document.write("</table>");
+</script>
+<form action="{{url_for('welStud')}}" method="post"></br></br>
+       Enter subject code: <input type="text" name="code"/>
+		  </br></br>
+        <input class="btn btn-default" type="submit" value="Submit">
+      </form>
+
+    </div>
+  </body>
+</html>

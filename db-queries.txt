@@ -1,0 +1,101 @@
+Queries:
+
+//sql query phpmyadmin to create table in localhost
+CREATE TABLE `users` (
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `email` varchar(255) COLLATE utf8_bin NOT NULL,
+    `password` varchar(255) COLLATE utf8_bin NOT NULL,
+    PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin
+AUTO_INCREMENT=1 ;
+
+//sample python code to connect to localhost, use the table and run other queries
+import pymysql.cursors
+
+# Connect to the database
+connection = pymysql.connect(host='localhost',
+                             user='user',
+                             password='passwd',
+                             db='db',
+                             charset='utf8mb4',
+                             cursorclass=pymysql.cursors.DictCursor)
+
+try:
+    with connection.cursor() as cursor:
+        # Create a new record
+        sql = "INSERT INTO `users` (`email`, `password`) VALUES (%s, %s)"
+        cursor.execute(sql, ('webmaster@python.org', 'very-secret'))
+
+    # connection is not autocommit by default. So you must commit to save
+    # your changes.
+    connection.commit()
+
+    with connection.cursor() as cursor:
+        # Read a single record
+        sql = "SELECT `id`, `password` FROM `users` WHERE `email`=%s"
+        cursor.execute(sql, ('webmaster@python.org',))
+        result = cursor.fetchone()
+        print(result)
+finally:
+    connection.close()
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+num table:
+
+#	Name	Type	Collation	Attributes	Null	Default	Extra	Action
+	1	idPrimary	int(11)			No	None	AUTO_INCREMENT	Change Change	Drop Drop	
+
+
+	2	no	int(11)			No	None		Change Change	Drop Drop	
+
+	3	sub	varchar(255)			No	None		Change Change	Drop Drop	
+
+results table:
+
+#	Name	Type	Collation	Attributes	Null	Default	Extra	Action
+	1	idPrimary	int(11)			No	None	AUTO_INCREMENT	Change Change	Drop Drop	
+
+	2	usn	varchar(255)			No	None		Change Change	Drop Drop	
+
+	3	subject	varchar(255)			No	None		Change Change	Drop Drop	
+
+	4	question	varchar(255)			No	None		Change Change	Drop Drop	
+
+	5	tutans	varchar(1000)			No	None		Change Change	Drop Drop	
+
+	6	studans	varchar(1000)			No	None		Change Change	Drop Drop	
+
+	7	marks	varchar(255)			No	None		Change Change	Drop Drop	
+
+	8	cosine	varchar(255)			No	None		Change Change	Drop Drop	
+
+	9	levenshtein	varchar(255)			No	None		Change Change	Drop Drop	
+
+	10	jaccard	varchar(255)			No	None		Change Change	Drop Drop	
+
+	11	dice	varchar(255)			No	None		Change Change	Drop Drop	
+
+	12	semantic	varchar(255)			No	None		Change Change	Drop Drop	
+
+	13	total	varchar(255)			No	None		Change Change	Drop Drop	
+
+stud table:
+
+#	Name	Type	Collation	Attributes	Null	Default	Extra	Action
+	1	idPrimary	int(11)			No	None	AUTO_INCREMENT	Change Change	Drop Drop	
+
+	2	usn	varchar(255)			No	None		Change Change	Drop Drop	
+
+	3	answer	varchar(1000)			No	None		Change Change	Drop Drop	
+
+	4	subject	varchar(255)			No	None		Change Change	Drop Drop	
+
+subjects table:
+
+#       Name	Type	Collation	Attributes	Null	Default	Extra	Action
+	1	idPrimary	int(11)			No	None	AUTO_INCREMENT	Change Change	Drop Drop	
+
+	2	subname	varchar(255)			No	None		Change Change	Drop Drop	
+
+------------------------------------------------------------------------------------------------------------------------------

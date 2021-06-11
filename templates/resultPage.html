@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+  <head>
+    <title>Results</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">-->
+    <link rel="stylesheet" href="static/dist/css/site.min.css">
+    
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700,400italic,600italic,700italic,800italic,300italic" rel="stylesheet" type="text/css">
+  </head>
+  <style>
+body
+{
+   
+}
+</style>
+  <!--font face="garamond" size=6 color="red">
+    <h1>
+    <center>Results</center>
+    </h1>
+    </font-->
+	
+	 <div class="alert alert-info">
+                       
+ <!--button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button-->
+                        
+<h1><center>RESULTS</center></h1>
+                     
+   <!--<p>Change this and that and try again. , est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+-->             
+           <p>                                          </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+  <body>
+    <div class="container" style="overflow-x:auto">
+     <!-- <h1>hello {{n}} </h1>-->
+      <!--<h1>hello {{t_q[0]}} </h1>-->
+      <br>
+       <script type='text/javascript'>
+//var num = prompt("Enter Number", "0") //prompt user to enter the number
+var num='{{n}}'
+//var tq='{{t_q}}'
+var num = parseInt(num); //parse the num to number
+var i = 0;
+//var i=parseInt(i)
+j=0
+j=parseInt(j)
+//var e='{{total|tojson}}'
+document.write('<font size=5>');
+document.write('<table width="100%" border="3" cellspacing="3">');
+document.write('<tr><th>Question'+'</th>'+'<th>Tutor Answer</th>'+'<th>Student Answer</th>'+'<th>Individual Score</th>');
+var a={{t_q|tojson}}
+var b={{t_a|tojson}}
+var c={{s_a|tojson}}
+var d={{result|tojson}}
+var e={{total|tojson}}
+
+console.log(num);
+console.log(a);
+console.log(b);
+console.log(c);
+console.log(d);
+console.log(e);
+
+
+for(i=0;i<num;i++) {
+    //var a=['{{ ', '.join(t_q)}}']
+    document.write("<tr><td>"+a[i]+"</td><td>"+b[i]+"</td><td>"+c[i]+"</td><td>"+d[i]+"</td></tr>");
+    //j++
+ //   document.write(e)
+}
+
+
+document.write("</table>");
+document.write("Total score:"+str(e))
+</script>
+<br>
+<br>
+<div class="text-center">
+  <h2>Final Score : {{total}}</h2>
+					<a href="/" class="txt2 hov1">
+						Click to Exit
+					</a>
+				</div>   
+    </div>
+  </body>
+</html>

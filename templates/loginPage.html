@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Login page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <font face="garamond" size=6 color="DodgerBlue   ">
+    <h1>
+    <center>Please Login</center>
+    </h1>
+    </font>
+    <body bgcolor="PaleTurquoise  ">
+  <body>
+    <div class="container">
+     
+      <br>
+      <form action="" method="post">
+        <input type="text" placeholder="Username" name="username" value="{{
+          request.form.username }}">
+         <input type="password" placeholder="Password" name="password" value="{{
+          request.form.password }}">
+        <input class="btn btn-default" type="submit" value="Login">
+      </form>
+      
+    </div>
+  </body>
+</html>
